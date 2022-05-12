@@ -1,9 +1,10 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class ArrayListEx {
     public static void main(String[] args) {
-        ArrayList<String> a = new ArrayList<String>();
+        ArrayList<String> a = new ArrayList<>();
 
         Scanner in = new Scanner(System.in);
 
@@ -29,9 +30,23 @@ public class ArrayListEx {
         String toFind = "NaN";
         if (a.indexOf(toFind) == -1) {
             System.out.println("There's no " + toFind);
-        }
-        else System.out.println(a.get(a.indexOf(toFind)));
+        } else
+            System.out.println(a.get(a.indexOf(toFind)));
 
         in.close();
+
+        ArrayList<Integer> arr = new ArrayList<>();
+        for (int i = 1; i <= 10; i++)
+            arr.add(i);
+        Iterator<Integer> it = arr.iterator();
+        while (it.hasNext()) {
+            int value = it.next();
+            System.out.println(value);
+        }
+        for (int value : arr)
+            System.out.println(value);
+        for (int i = 0; i < arr.size(); i++) {
+            System.out.println(arr.get(i));
+        }
     }
 }

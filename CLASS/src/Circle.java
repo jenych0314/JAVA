@@ -2,10 +2,11 @@ public class Circle extends Shape {
     private int radius;
     protected String name;
 
-    //constructor
+    // constructor
     public Circle() {
         this(0, "Circle");
     }
+
     public Circle(int radius, String name) {
         this.radius = radius;
         this.name = name;
@@ -38,7 +39,7 @@ public class Circle extends Shape {
         // super.draw();
         System.out.println(name);
     }
-    
+
     public static void main(String[] args) {
         Circle pizza;
         pizza = new Circle();
