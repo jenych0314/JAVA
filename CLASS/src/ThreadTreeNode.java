@@ -2,10 +2,10 @@ import java.util.ArrayList;
 
 public class ThreadTreeNode<T> extends TreeNode<T> {
     T data;
-    ThreadTreeNode<T> llink;
-    ThreadTreeNode<T> rlink;
     boolean LT;
     boolean RT;
+    ThreadTreeNode<T> llink;
+    ThreadTreeNode<T> rlink;
 
     ThreadTreeNode() {
         this(null);
@@ -218,8 +218,12 @@ public class ThreadTreeNode<T> extends TreeNode<T> {
         for (int val : nums) {
             ArrayList<Integer> arr = tree.higher(val, comp);
             System.out.print(val + " higher: ");
-            for (var elem : arr)
-                System.out.print(elem + " ");
+            if (arr == null)
+                System.out.print("null");
+            else {
+                for (var elem : arr)
+                    System.out.print(elem + " ");
+            }
             System.out.println();
         }
     }

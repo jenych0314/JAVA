@@ -4,6 +4,18 @@ public class GraphMatrix {
     int[][] edges;
     boolean[] visited;
 
+    interface Graph {
+        public void add(int source, int destination, int weight);
+
+        public int getWeight(int source, int destination);
+
+        public int getSize();
+
+        public boolean isDirected();
+
+        public void print();
+    }
+
     GraphMatrix(int size, boolean directed) {
         this.size = size;
         this.directed = directed;
@@ -18,6 +30,24 @@ public class GraphMatrix {
         }
     }
 
+    public void add(int src, int dest, int weight) {
+        this.edges[src][dest] = weight;
+        if (!this.directed)
+            this.edges[dest][src] = weight;
+    }
+
+    public int getWeight(int src, int dest) {
+        return this.edges[src][dest];
+    }
+
+    public int getSize() {
+        return this.size;
+    }
+
+    public boolean isDirected() {
+        return this.directed;
+    }
+
     public void DFS(int v) {
         this.visited = new boolean[size];
         printDFS(v);
@@ -30,6 +60,18 @@ public class GraphMatrix {
         for (int i = 0; i < this.size; i++) {
             if (this.edges[v][i] == 1 && this.visited[i] == false)
                 printDFS(i);
+        }
+    }
+
+    public void print() {
+        System.out.println("SIZE = " + this.size);
+        System.out.println("DIRECTED = " + this.directed);
+
+        for (int row = 0; row < this.size; row++) {
+            for (int col = 0; col < this.size; col++) {
+                System.out.format("%02d |", this.edges[row][col]);
+            }
+            System.out.println();
         }
     }
 
