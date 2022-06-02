@@ -1,20 +1,8 @@
-public class GraphMatrix {
+public class GraphMatrix implements Graph {
     int size;
     boolean directed;
     int[][] edges;
     boolean[] visited;
-
-    interface Graph {
-        public void add(int source, int destination, int weight);
-
-        public int getWeight(int source, int destination);
-
-        public int getSize();
-
-        public boolean isDirected();
-
-        public void print();
-    }
 
     GraphMatrix(int size, boolean directed) {
         this.size = size;
@@ -31,12 +19,16 @@ public class GraphMatrix {
     }
 
     public void add(int src, int dest, int weight) {
+        // check range src and dest: 0 <= src, dest < size
+        // check weight: weight >= 0
         this.edges[src][dest] = weight;
         if (!this.directed)
             this.edges[dest][src] = weight;
     }
 
     public int getWeight(int src, int dest) {
+        // check range src and dest: 0 <= src, dest < size
+        // check weight: weight >= 0
         return this.edges[src][dest];
     }
 

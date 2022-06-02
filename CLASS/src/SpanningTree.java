@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import java.util.Collection;
+import java.util.Collections;
 
 public class SpanningTree extends GraphMatrix {
     SpanningTree() {
@@ -11,13 +11,16 @@ public class SpanningTree extends GraphMatrix {
     }
 
     public void add(int src, int dest, int weight) {
+        // check range src and dest: 0 <= src, dest < size
+        // check weight: weight >= 0
+        // check cycle
         this.edges[src][dest] = weight;
     }
 
     public int weight() {
         int result = 0;
         for (int row = 0; row < this.size; row++) {
-            for (int col = 0; col < this.size; col++) {
+            for (int col = row; col < this.size; col++) { // int col = 0 일 때보다 탐색량 1/2배로 감소
                 result += this.edges[row][col];
             }
         }
@@ -42,13 +45,15 @@ public class SpanningTree extends GraphMatrix {
 
     class KruskalMethodBuilder implements SpanningTreeBuilder {
         public SpanningTree build(Graph graph, int source) {
+            // initalize
             boolean visited[] = new boolean[graph.getSize()];
             int disjoint[] = new int[graph.getSize()];
-            SpanningTree tree = new SpanningTree();
+            SpanningTree tree = new SpanningTree(graph.getSize());
             for (int v = 0; v < graph.getSize(); v++) {
                 disjoint[v] = v;
             }
 
+            // extract edges
             ArrayList<Edge> edges = new ArrayList<Edge>();
             for (int row = 0; row < graph.getSize(); row++) {
                 int col = graph.isDirected() ? 0 : row;
@@ -59,18 +64,24 @@ public class SpanningTree extends GraphMatrix {
                 }
             }
 
-            Collection.sort(edges, (e1, e2) -> {
+            // sort edges
+            Collections.sort(edges, (Edge e1, Edge e2) -> {
                 return e1.weight - e2.weight; // 오름차순
-                return e2.weight - e1.weight; // 내림차순
+                // return e2.weight - e1.weight; // 내림차순
             });
 
+            // Kruskal method
             for (int i = 0; i < edges.size(); i++) {
                 Edge select = edges.get(i);
+
                 int a = find(select.start, disjoint);
                 int b = find(select.end, disjoint);
+
                 if (a == b)
                     continue;
+
                 union(a, b, disjoint);
+
                 tree.add(select.start, select.end, select.weight);
             }
 
