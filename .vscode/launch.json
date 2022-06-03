@@ -1,0 +1,420 @@
+{
+    // IntelliSense를 사용하여 가능한 특성에 대해 알아보세요.
+    // 기존 특성에 대한 설명을 보려면 가리킵니다.
+    // 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch A",
+            "request": "launch",
+            "mainClass": "A",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch ArrayListEx",
+            "request": "launch",
+            "mainClass": "ArrayListEx",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch AutoBoxingUnBoxingEx",
+            "request": "launch",
+            "mainClass": "AutoBoxingUnBoxingEx",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch B",
+            "request": "launch",
+            "mainClass": "B",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch C_20220314",
+            "request": "launch",
+            "mainClass": "C_20220314",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch C_20220314_2",
+            "request": "launch",
+            "mainClass": "C_20220314_2",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch C_20220314_3",
+            "request": "launch",
+            "mainClass": "C_20220314_3",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch C_20220316",
+            "request": "launch",
+            "mainClass": "C_20220316",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch C_20220318",
+            "request": "launch",
+            "mainClass": "C_20220318",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch CalendarEx",
+            "request": "launch",
+            "mainClass": "CalendarEx",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch Circle",
+            "request": "launch",
+            "mainClass": "Circle",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch CircleEx",
+            "request": "launch",
+            "mainClass": "CircleEx",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch CircularLinkedList",
+            "request": "launch",
+            "mainClass": "CircularLinkedList",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch CircularQueue",
+            "request": "launch",
+            "mainClass": "CircularQueue",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch ColorPoint",
+            "request": "launch",
+            "mainClass": "ColorPoint",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch ColorPointEx",
+            "request": "launch",
+            "mainClass": "ColorPointEx",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch ConstructorEx",
+            "request": "launch",
+            "mainClass": "ConstructorEx",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch DowncastingEx",
+            "request": "launch",
+            "mainClass": "DowncastingEx",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch EqualsEx",
+            "request": "launch",
+            "mainClass": "EqualsEx",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch FileNameChange",
+            "request": "launch",
+            "mainClass": "FileNameChange",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch GoodCalc",
+            "request": "launch",
+            "mainClass": "GoodCalc",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch GraphList",
+            "request": "launch",
+            "mainClass": "GraphList",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch GraphMatrix",
+            "request": "launch",
+            "mainClass": "GraphMatrix",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch HashMapDicEx",
+            "request": "launch",
+            "mainClass": "HashMapDicEx",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch InstanceOfEx",
+            "request": "launch",
+            "mainClass": "InstanceOfEx",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch InterfaceEx",
+            "request": "launch",
+            "mainClass": "InterfaceEx",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch JavaDocFrameTest",
+            "request": "launch",
+            "mainClass": "JavaDocFrameTest",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lab0406",
+            "request": "launch",
+            "mainClass": "Lab0406",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch Lab0411",
+            "request": "launch",
+            "mainClass": "Lab0411",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch Line",
+            "request": "launch",
+            "mainClass": "Line",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch MathEx",
+            "request": "launch",
+            "mainClass": "MathEx",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch MaxHeap",
+            "request": "launch",
+            "mainClass": "MaxHeap",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch MethodOverridingEx",
+            "request": "launch",
+            "mainClass": "MethodOverridingEx",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch ObjectPropertyEx",
+            "request": "launch",
+            "mainClass": "ObjectPropertyEx",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch PDA",
+            "request": "launch",
+            "mainClass": "PDA",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch ParenthesisChecker",
+            "request": "launch",
+            "mainClass": "ParenthesisChecker",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch PayableInterfaceTest",
+            "request": "launch",
+            "mainClass": "PayableInterfaceTest",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch Person",
+            "request": "launch",
+            "mainClass": "Person",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch Point",
+            "request": "launch",
+            "mainClass": "Point",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch Professor",
+            "request": "launch",
+            "mainClass": "Professor",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch Rect",
+            "request": "launch",
+            "mainClass": "Rect",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch Researcher",
+            "request": "launch",
+            "mainClass": "Researcher",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch Shape",
+            "request": "launch",
+            "mainClass": "Shape",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch SingleLinkedList",
+            "request": "launch",
+            "mainClass": "SingleLinkedList",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch SortTest",
+            "request": "launch",
+            "mainClass": "SortTest",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch SpanningTree$KruskalLab",
+            "request": "launch",
+            "mainClass": "SpanningTree$KruskalLab",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch StringBufferEx",
+            "request": "launch",
+            "mainClass": "StringBufferEx",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch StringEx",
+            "request": "launch",
+            "mainClass": "StringEx",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch StringTokenizerEx",
+            "request": "launch",
+            "mainClass": "StringTokenizerEx",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch Student",
+            "request": "launch",
+            "mainClass": "Student",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch Term",
+            "request": "launch",
+            "mainClass": "Term",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch ThreadTreeNode",
+            "request": "launch",
+            "mainClass": "ThreadTreeNode",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch TreeNode$TreeNodeTraversal",
+            "request": "launch",
+            "mainClass": "TreeNode$TreeNodeTraversal",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch UpcastingEx",
+            "request": "launch",
+            "mainClass": "UpcastingEx",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch UseArray2",
+            "request": "launch",
+            "mainClass": "UseArray2",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch UsingOverride",
+            "request": "launch",
+            "mainClass": "UsingOverride",
+            "projectName": "JAVA_a085cf44"
+        },
+        {
+            "type": "java",
+            "name": "Launch WrapperEx",
+            "request": "launch",
+            "mainClass": "WrapperEx",
+            "projectName": "JAVA_a085cf44"
+        }
+    ]
+}

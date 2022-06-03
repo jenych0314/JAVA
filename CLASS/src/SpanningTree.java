@@ -46,7 +46,7 @@ public class SpanningTree extends GraphMatrix {
     class KruskalMethodBuilder implements SpanningTreeBuilder {
         public SpanningTree build(Graph graph, int source) {
             // initalize
-            boolean visited[] = new boolean[graph.getSize()];
+            // boolean visited[] = new boolean[graph.getSize()];
             int disjoint[] = new int[graph.getSize()];
             SpanningTree tree = new SpanningTree(graph.getSize());
             for (int v = 0; v < graph.getSize(); v++) {
@@ -119,9 +119,9 @@ public class SpanningTree extends GraphMatrix {
             g.add(4, 6, 24);
             g.print();
 
-            SpanningTreeBuilder builder = new KruskalMethodBuilder();
-            SpanningTree tree = builder.build(g, 0);
-            tree.print();
+            // SpanningTreeBuilder builder = new KruskalMethodBuilder();
+            // SpanningTree tree = builder.build(g, 0);
+            // tree.print();
         }
     }
 }
