@@ -15,6 +15,10 @@ public class SortTest extends SortMethod {
         arr[5] = new int[5000000];
         arr[6] = new int[10000000];
 
+        // int[][] arr = new int[10][];
+        // for (int i = 1; i <= 10; i++)
+        // arr[i - 1] = new int[i * 100000];
+
         try {
             File file = new File("C:\\Users\\jeony\\Downloads\\input.txt");
             FileReader fr = new FileReader(file);
@@ -41,6 +45,7 @@ public class SortTest extends SortMethod {
     }
 
     public static void bubbleSortIterativeTest() {
+        System.out.println("---bubbleSort---");
         int[][] data = fileRead();
         for (int i = 0; i < data.length; i++) {
             long beforeTime = System.currentTimeMillis();
@@ -51,15 +56,59 @@ public class SortTest extends SortMethod {
         }
     }
 
+    public static void insertionSortIterativeTest() {
+        System.out.println("---insertionSort---");
+        int[][] data = fileRead();
+        for (int i = 0; i < data.length; i++) {
+            long beforeTime = System.currentTimeMillis();
+            insertionSortIterative(data[i]);
+            long afterTime = System.currentTimeMillis();
+            double diffTime = (afterTime - beforeTime) / 1000.0;
+            System.out.format("arr size: %,d -> 정렬 시간(sec) : %,.3f%n", data[i].length, diffTime);
+        }
+    }
+
+    public static void SelectionSortIterativeTest() {
+        System.out.println("---SelectionSort---");
+        int[][] data = fileRead();
+        for (int i = 0; i < data.length; i++) {
+            long beforeTime = System.currentTimeMillis();
+            SelectionSortIterative(data[i]);
+            long afterTime = System.currentTimeMillis();
+            double diffTime = (afterTime - beforeTime) / 1000.0;
+            System.out.format("arr size: %,d -> 정렬 시간(sec) : %,.3f%n", data[i].length, diffTime);
+        }
+    }
+
+    public static void QuickSortRecursiveTest() {
+        System.out.println("---QuickSort---");
+        int[][] data = fileRead();
+        for (int i = 0; i < data.length; i++) {
+            long beforeTime = System.currentTimeMillis();
+            QuickSortRecursive(data[i]);
+            long afterTime = System.currentTimeMillis();
+            double diffTime = (afterTime - beforeTime) / 1000.0;
+            System.out.format("arr size: %,d -> 정렬 시간(sec) : %,.3f%n", data[i].length, diffTime);
+        }
+    }
+
+    public static void MergeSortRecursiveTest() {
+        System.out.println("---mergeSort---");
+        int[][] data = fileRead();
+        for (int i = 0; i < data.length; i++) {
+            long beforeTime = System.currentTimeMillis();
+            MergeSortRecursive(data[i]);
+            long afterTime = System.currentTimeMillis();
+            double diffTime = (afterTime - beforeTime) / 1000.0;
+            System.out.format("arr size: %,d -> 정렬 시간(sec) : %,.3f%n", data[i].length, diffTime);
+        }
+    }
+
     public static void main(String[] args) {
-        // int[][] arr = fileRead();
-        // for (int i = 0; i < arr.length; i++) {
-        // System.out.println("--- --- " + i + " --- ---");
-        // for (int j = 0; j < 100; j++) {
-        // System.out.print(arr[i][j] + ", ");
-        // }
-        // System.out.println();
-        // }
         bubbleSortIterativeTest();
+        // insertionSortIterativeTest();
+        // SelectionSortIterativeTest();
+        // QuickSortRecursiveTest();
+        // MergeSortRecursiveTest();
     }
 }

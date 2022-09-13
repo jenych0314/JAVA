@@ -54,16 +54,17 @@ class SortMethod {
     }
 
     public static void insertionSortIterative(int[] data) {
-        int pos = 0, insert;
         for (int i = 1; i < data.length; i++) {
-            insert = data[i];
-            for (pos = 0; pos < i; pos++) {
-                if (data[pos] > insert)
-                    break;
+            int target = data[i];
+
+            int j = i - 1;
+
+            while (j >= 0 && target < data[j]) {
+                data[j + 1] = data[j];
+                j--;
             }
-            for (int j = i; i > pos; j--)
-                data[j] = data[j - 1];
-            data[pos] = insert;
+
+            data[j + 1] = target;
         }
     }
 

@@ -98,8 +98,9 @@ public class ThreadTreeNode<T> extends TreeNode<T> {
         } else {
             ThreadTreeNode<T> p = this.llink;
             while (true) {
-                if (comp.compare(p.data, insert.data) < 0) { // p.data < insert.data
-                    if (!p.getRT())
+                int compare = comp.compare(p.data, insert.data);
+                if (compare < 0) { // p.data < insert.data
+                    if (!p.getRT()) // p.right is not thread
                         p = p.rlink;
                     else {
                         insert.rlink = p.rlink;
@@ -116,7 +117,7 @@ public class ThreadTreeNode<T> extends TreeNode<T> {
 
                         return true;
                     }
-                } else if (comp.compare(p.data, insert.data) > 0) { // p.data > insert.data
+                } else if (compare > 0) { // p.data > insert.data
                     if (!p.getLT())
                         p = p.llink;
                     else {

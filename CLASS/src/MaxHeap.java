@@ -38,12 +38,10 @@ public class MaxHeap {
         if (isFull())
             throw new RuntimeException("Full");
 
-        int ptr;
+        int ptr = ++this.top;
         if (isEmpty()) {
-            ptr = ++this.top;
             this.heap[ptr] = value;
         } else {
-            ptr = ++this.top;
             while ((ptr != 0) && (comp.compare(value, this.heap[ptr / 2]) > 0)) {
                 this.heap[ptr] = this.heap[ptr / 2];
                 ptr /= 2;

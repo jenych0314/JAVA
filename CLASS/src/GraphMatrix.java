@@ -1,21 +1,33 @@
+interface Graph {
+    public void add(int source, int destination, int weight);
+
+    public int getWeight(int source, int destination);
+
+    public int getSize();
+
+    public boolean isDirected();
+
+    public void print();
+}
+
 public class GraphMatrix implements Graph {
     int size;
     boolean directed;
     int[][] edges;
+    int[] distance;
     boolean[] visited;
+    int MAX_VALUE = 10000000;
 
     GraphMatrix(int size, boolean directed) {
         this.size = size;
         this.directed = directed;
         this.edges = new int[size][size];
-        // this.visited = new boolean[size];
+        this.distance = new int[size];
+        this.visited = new boolean[size];
     }
 
     public void add(int v1, int v2) {
-        this.edges[v1][v2] = 1;
-        if (!this.directed) {
-            this.edges[v2][v1] = 1;
-        }
+        add(v1, v2, 1);
     }
 
     public void add(int src, int dest, int weight) {
@@ -42,17 +54,54 @@ public class GraphMatrix implements Graph {
 
     public void DFS(int v) {
         this.visited = new boolean[size];
-        printDFS(v);
+        dfsInternal(v);
         System.out.println();
     }
 
-    public void printDFS(int v) {
+    public void dfsInternal(int v) {
         this.visited[v] = true;
         System.out.print(v + " -> ");
         for (int i = 0; i < this.size; i++) {
             if (this.edges[v][i] == 1 && this.visited[i] == false)
-                printDFS(i);
+                dfsInternal(i);
         }
+    }
+
+    public void shortestPath(int v) {
+        // found와 distance 배열 선언 및 초기화
+        int u, w;
+        for (int i = 0; i < this.size; i++) {
+            visited[i] = false;
+            distance[i] = edges[v][i];
+        }
+
+        // 시작 정점을 S에 추가
+        visited[v] = true;
+        distance[v] = 0;
+
+        for (int i = 0; i < this.size - 2; i++) { // v를 제외한 정점에 대한 최단 경로 찾기
+            u = choose(distance, visited); // 최소 거리에 있는 정점 u 선택
+            visited[u] = true;
+            for (w = 0; w < size; w++) {
+                if (visited[w])
+                    continue;
+                if (distance[u] + edges[u][w] < distance[w])
+                    distance[w] = distance[u] + edges[u][w];
+            }
+        }
+    }
+
+    int choose(int distance[], boolean found[]) {
+        int i, min, minPos;
+        min = MAX_VALUE;
+        minPos = -1;
+        for (i = 0; i < this.size; i++) {
+            if (distance[i] < min && !found[i]) {
+                min = distance[i];
+                minPos = i;
+            }
+        }
+        return minPos;
     }
 
     public void print() {
