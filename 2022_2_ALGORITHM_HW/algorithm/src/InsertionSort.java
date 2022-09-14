@@ -18,7 +18,8 @@ class InsertionSort {
         for (int i = 1; i < size; i++) {
             for (int j = i; j > 0; j--) {
                 cntCmpOps++;
-                if (!(arr[j - 1] > arr[j])) break;
+                if (!(arr[j - 1] > arr[j]))
+                    break;
                 swap(arr, j - 1, j);
                 cntSwaps++;
             }
@@ -29,10 +30,10 @@ class InsertionSort {
     static void insertionSortImproved(int[] arr, int size) {
         int cntCmpOps = 0;
         int cntSwaps = 0;
-        
+
         for (int i = 1; i < size; i++) {
             int tmp = arr[i];
-            
+
             int j;
             for (j = i; j > 0; j--) {
                 cntCmpOps++;
@@ -49,12 +50,12 @@ class InsertionSort {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int max_size = BubbleSort.MAX_SIZE;
+        int max_size = InsertionSort.MAX_SIZE;
 
         int numTestCases = in.nextInt();
         for (int i = 0; i < numTestCases; i++) {
             int[] arr = new int[max_size];
-            
+
             int num = in.nextInt();
             for (int j = 0; j < num; j++) {
                 arr[j] = in.nextInt();

@@ -19,8 +19,8 @@ class CombSort {
         double shrink = 1.3;
         boolean sorted = false;
 
-        while(!sorted) {
-            gap = (int)(gap / shrink);
+        while (!sorted) {
+            gap = (int) (gap / shrink);
 
             if (gap <= 1) {
                 gap = 1;
@@ -28,7 +28,7 @@ class CombSort {
             }
 
             int i = 0;
-            while(i + gap < size) {
+            while (i + gap < size) {
                 if (arr[i] > arr[i + gap]) {
                     swap(arr, i, i + gap);
                     sorted = false;
@@ -44,12 +44,12 @@ class CombSort {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int max_size = BubbleSort.MAX_SIZE;
+        int max_size = CombSort.MAX_SIZE;
 
         int numTestCases = in.nextInt();
         for (int i = 0; i < numTestCases; i++) {
             int[] arr = new int[max_size];
-            
+
             int num = in.nextInt();
             for (int j = 0; j < num; j++) {
                 arr[j] = in.nextInt();

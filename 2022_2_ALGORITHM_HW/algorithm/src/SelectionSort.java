@@ -25,8 +25,8 @@ class SelectionSort {
                 cntCmpOps++;
             }
 
-            if (min_idx != i){
-                swap(arr, min_idx, j);
+            if (min_idx != i) {
+                swap(arr, min_idx, i);
                 cntSwaps++;
             }
         }
@@ -36,12 +36,12 @@ class SelectionSort {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int max_size = BubbleSort.MAX_SIZE;
+        int max_size = SelectionSort.MAX_SIZE;
 
         int numTestCases = in.nextInt();
         for (int i = 0; i < numTestCases; i++) {
             int[] arr = new int[max_size];
-            
+
             int num = in.nextInt();
             for (int j = 0; j < num; j++) {
                 arr[j] = in.nextInt();
@@ -53,8 +53,3 @@ class SelectionSort {
         in.close();
     }
 }
-
-// 3
-// 9 1 2 3 4 5 6 7 8 9
-// 9 9 8 7 6 5 4 3 2 1
-// 9 9 6 3 1 2 4 5 7 8

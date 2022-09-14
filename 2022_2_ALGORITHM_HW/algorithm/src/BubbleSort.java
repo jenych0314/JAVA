@@ -50,7 +50,8 @@ class BubbleSort {
                 cntCmpOps++;
             }
 
-            if (!swapped) break;
+            if (!swapped)
+                break;
         }
 
         System.out.print(cntCmpOps + " " + cntSwaps + " ");
@@ -62,7 +63,7 @@ class BubbleSort {
 
         int lastSwappedPos = size;
 
-        while(lastSwappedPos > 0) {
+        while (lastSwappedPos > 0) {
             int swappedPos = 0;
 
             for (int i = 1; i < lastSwappedPos; i++) {
@@ -88,7 +89,7 @@ class BubbleSort {
         for (int i = 0; i < numTestCases; i++) {
             int[] arr1 = new int[max_size];
             int[] arr2 = new int[max_size];
-            
+
             int num = in.nextInt();
             for (int j = 0; j < num; j++) {
                 arr2[j] = in.nextInt();
